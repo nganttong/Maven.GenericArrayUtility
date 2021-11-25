@@ -73,4 +73,21 @@ public class CountDuplicatesInMergeTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void integerTestForNull() {
+        //Test added from Cay
+        // Given
+        Integer valueToEvaluate = 7;
+        Integer expected = 0;
+        Integer[] inputArray = {1, 2, 8, 4, 5, 0, 9, 8};
+        Integer[] arrayToMerge = {1, 2, 8, 4, 5, 0, 9, 8};
+        ArrayUtility<Integer> arrayUtility = new ArrayUtility<Integer>(inputArray);
+
+        // When
+        Integer actual = arrayUtility.countDuplicatesInMerge(arrayToMerge, valueToEvaluate);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }
